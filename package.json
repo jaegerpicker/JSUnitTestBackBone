@@ -1,0 +1,38 @@
+{
+  "name": "JSUnitTestBackBone",
+  "version": "0.0.1",
+  "description": "A JS Backbone unit testing sample app",
+  "main": "index.js",
+  "scripts": {
+    "test": "testem"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaegerpicker/JSUnitTestBackBone.git"
+  },
+  "keywords": [
+    "backbone.js",
+    "unit",
+    "testing"
+  ],
+  "author": "Shawn Campbell <jaegerpicker@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jaegerpicker/JSUnitTestBackBone/issues"
+  },
+  "dependencies": {
+    "phantomjs": "*",
+    "bower": "*",
+    "underscore": "*",
+    "backbone": "1.1.2",
+    "testem": "0.6.12",
+    "mocha": "*",
+    "chai": "*",
+    "sinon": "*",
+    "istanbul": "*",
+    "mocha-istanbul": "*"
+  },
+  "devDependencies": {
+    "gulp": "~3.6.0"
+  }
+}
