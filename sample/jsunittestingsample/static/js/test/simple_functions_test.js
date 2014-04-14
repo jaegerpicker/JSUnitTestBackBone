@@ -1,9 +1,15 @@
 var xhr, requests;
 
+//Mocked out version
 before(function () {
     xhr = sinon.useFakeXMLHttpRequest();
     requests = [];
-    xhr.onCreate = function (req) { requests.push(req); };
+    requests.responseText = 'Test!';
+
+    xhr.onCreate = function (req) {
+                    requests.push(req);
+                    xhr.responseText = requests.responseTest;
+                   };
 });
 
 after(function () {
@@ -13,10 +19,20 @@ after(function () {
 
 it("makes a GET request for sample html", function () {
     getHtmlFromSampleHTML(sinon.spy());
-
-    chai.assert.equal(requests.length, 1);
-    chai.assert.equal(requests[0].url, "/sample");
+    console.log(requests.responseText);
+    requests[0].respond(200, { "Content-Type": "text/html" },'Test! Mocking you!');
+    console.log(requests[0].responseText);
+    chai.expect(requests.length).to.equal(1);
+    chai.expect(requests[0].url).to.equal("/sample/");
 });
+
+//Non mocked out version
+/*it("makes a GET request for sample html", function(done) {
+    getHtmlFromSampleHTML(function(response) {
+        chai.expect(response.length).to.be.above(1);
+        done();
+    });
+});*/
 
 describe('simple functions', function(){
     describe('#addThenSub()', function(){
