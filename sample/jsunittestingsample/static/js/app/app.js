@@ -5,6 +5,7 @@ Backbone.sync = function( method, model, options ) {
     var headers = {};
 
     headers[ 'X-CSRFToken' ] = CSRF_TOKEN;
+    headers[ 'JSUnitTesting' ] = true;
 
     headers = _.extend(headers, options.headers);
     options.headers = headers;
