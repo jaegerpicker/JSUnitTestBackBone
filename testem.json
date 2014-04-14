@@ -3,7 +3,12 @@
     "src_files": [
         "node_modules/chai/chai.js",
         "node_modules/sinon/pkg/sinon.js",
+        "sample/jsunittestingsample/static/js/vendor/jquery/dist/jquery.js",
+        "sample/jsunittestingsample/static/js/vendor/underscore/underscore.js",
+        "sample/jsunittestingsample/static/js/vendor/backbone/backbone.js",
         "sample/jsunittestingsample/static/js/app/simple_functions.js",
+        "sample/jsunittestingsample/static/js/app/models/profile.js",
+        "sample/jsunittestingsample/static/js/app/**.js",
         "sample/jsunittestingsample/static/js/test/*.js"
     ]
 }

@@ -76,6 +76,9 @@ var app = app || {};
             }
             return this;
         },
+        addTheMulti: function(num1, num2, num3) {
+            return (num1 + num2) * num3;
+        },
         saveProfile: function() {
             var value = this.$lang.val();
             console.log(value);

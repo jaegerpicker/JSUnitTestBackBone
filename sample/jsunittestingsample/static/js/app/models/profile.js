@@ -10,9 +10,16 @@ var app = app || {};
     // Our basic **Todo** model has `title`, `order`, and `completed` attributes.
     var Profile = Backbone.Model.extend({
         defaults: {
-            lang_code: 'en-us'
+            lang_code: 'en-us',
+            title: ''
         },
-        urlRoot: "/users/profile/"
+        initialize: function(){
+            console.log("Welcome to this world");
+        },
+        urlRoot: "/users/profile/",
+        addThenMulti: function(num1, num2, num3) {
+            return (num1 + num2) * num3;
+        }
     });
 
     // We only have one profile on the app, the currently logged in user
