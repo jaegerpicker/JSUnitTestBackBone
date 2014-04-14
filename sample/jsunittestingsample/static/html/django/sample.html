@@ -1,0 +1,43 @@
+<html>
+<head>
+  <title>Backbone sample Unit Testing</title>
+  <!-- libs -->
+        <script src="static/js/vendor/jquery/dist/jquery.js"></script>
+        <script src="static/js/vendor/underscore/underscore.js"></script>
+        <script src="static/js/vendor/backbone/backbone.js"></script>
+
+        <!-- client templating -->
+        <script src="static/js/vendor/mustache/mustache.js"></script>
+
+        <!-- your app -->
+        <script src="static/js/app/app.js"></script>
+        <script src="static/js/app/models/MovieCollection.js"></script>
+        <script src="static/js/app/views/MovieView.js"></script>
+        <script src="static/js/app/routers/MovieAppModel.js"></script>
+
+        <script id="app" type="text/html">
+            <h1>Movie App</h1>
+            <ul id="movies"></ul>
+        </script>
+
+        <script id="movie" type="text/html">
+            <li id="{{ htmlId }}"><span class="title">{{ title }}</span> <span>{{ format }}</span></li>
+        </script>
+
+        <script>
+            $(document).ready(function () {
+                // init our app
+                window.app = MovieAppController.init({
+                    account: '{{ user.get_profile.account.slug }}',
+                    // etc, etc
+                });
+
+                // draw our main view
+                $('body').append(app.view.render().el);
+            });
+        </script>
+
+</head>
+<body>
+
+</body>

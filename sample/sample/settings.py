@@ -26,9 +26,7 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = ['*', ]
 
-TEMPLATE_DIRS = (
-    BASE_DIR + '/jsunittestingsample/static/html/django'
-)
+TEMPLATE_DIRS = ('jsunittestingsample/static/html/django',)
 
 
 # Application definition
@@ -84,4 +82,4 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'jsunittestingsample/static/'
