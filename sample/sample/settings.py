@@ -24,7 +24,11 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*', ]
+
+TEMPLATE_DIRS = (
+    BASE_DIR + '/jsunittestingsample/static/html/django'
+)
 
 
 # Application definition
