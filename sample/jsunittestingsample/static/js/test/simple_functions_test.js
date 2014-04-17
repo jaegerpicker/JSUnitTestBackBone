@@ -1,7 +1,7 @@
 var xhr, requests;
 
 //Mocked out version
-before(function () {
+/*before(function () {
     xhr = sinon.useFakeXMLHttpRequest();
     requests = [];
     requests.responseText = 'Test!';
@@ -24,15 +24,15 @@ it("makes a GET request for sample html", function () {
     console.log(requests[0].responseText);
     chai.expect(requests.length).to.equal(1);
     chai.expect(requests[0].url).to.equal("/sample/");
-});
+});*/
 
 //Non mocked out version
-/*it("makes a GET request for sample html", function(done) {
+it("makes a GET request for sample html", function(done) {
     getHtmlFromSampleHTML(function(response) {
         chai.expect(response.length).to.be.above(1);
         done();
     });
-});*/
+});
 
 describe('simple functions', function(){
     describe('#addThenSub()', function(){
