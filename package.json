@@ -4,7 +4,9 @@
   "description": "A JS Backbone unit testing sample app",
   "main": "index.js",
   "scripts": {
-    "test": "testem"
+    "test": "testem",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -25,12 +27,13 @@
     "bower": "*",
     "underscore": "*",
     "backbone": "1.1.2",
-    "testem": "0.6.12",
+    "testem": "1.9.0",
     "mocha": "*",
     "chai": "*",
     "sinon": "*",
     "istanbul": "*",
-    "mocha-istanbul": "*"
+    "mocha-istanbul": "*",
+    "snyk": "^1.104.2"
   },
   "devDependencies": {
     "gulp": "~3.6.0",
@@ -38,5 +41,6 @@
     "gulp-less": "~1.2.3",
     "gulp-watch": "~0.5.4",
     "gulp-util": "~2.2.14"
-  }
+  },
+  "snyk": true
 }
