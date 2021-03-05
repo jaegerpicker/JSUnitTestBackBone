@@ -25,7 +25,7 @@
     "bower": "*",
     "underscore": "*",
     "backbone": "1.1.2",
-    "testem": "0.6.12",
+    "testem": "0.9.10",
     "mocha": "*",
     "chai": "*",
     "sinon": "*",
